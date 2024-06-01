@@ -1,3 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    /* Target the entire scrollbar (for WebKit browsers) */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Target the scrollbar track */
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    /* Target the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: theme('colors.gray.300');
+        border-radius: 99px;
+    }
+
+    :root {
+        --primary: 213 100% 39%;
+
+        --foreground: 204 9% 33%;
+
+        --muted: 0 0% 52%;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: theme('colors.foreground');
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@layer components {
+    .main-layout {
+        display: grid;
+        grid-template-columns: 415px 1fr 396px;
+        grid-template-rows: auto 1fr;
+    }
+
+
+}
+
+
+/* React Calendar */
+.react-calendar__navigation {
+    /* display: flex; */
+    background-color: #FF1C31;
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+}
+
+.react-calendar__navigation button {
+    transition-duration: 200ms;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+    background-color: #da0117 !important;
+}
+
+abbr:where([title]) {
+	-webkit-text-decoration: none !important;
+	text-decoration: none !important;
+}
+
+.react-calendar__tile {
+    border-radius: 1000px;
+}
+
+.react-calendar__tile--active {
+	background: #FF1C31 !important;
+	color: white;
+}
+
+.react-calendar__tile--now {
+	background: #01C49B !important;
+    color: white !important;
+}
