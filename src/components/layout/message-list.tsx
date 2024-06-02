@@ -1,3 +1,9 @@
+import {
+  CheckCircleIcon,
+  GmailIcon,
+  PhoneIncomingIcon,
+  WhatsappIcon,
+} from "@/assets/icons";
 import BgImage from "./../../assets/images/whatsapp-bg.jpg";
 
 const MessageList = () => {
@@ -14,13 +20,20 @@ const MessageList = () => {
               </div>
             </div>
             <div className="flex flex-col items-end gap-y-1">
-              <span className="text-xs bg-[#01C49B] rounded-2xl text-white px-1 py-1.5 leading-none">
-                Verified
+              <span className="text-xs bg-[#01C49B] rounded-2xl text-white px-1 pl-2 py-1.5 leading-none flex items-center gap-2">
+                <span>Verified</span>
+                <CheckCircleIcon />
               </span>
               <div className="flex gap-2">
-                <span className="size-8 rounded-full bg-red-100"></span>
-                <span className="size-8 rounded-full bg-green-100"></span>
-                <span className="size-8 rounded-full bg-blue-100"></span>
+                <span className="size-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <GmailIcon />
+                </span>
+                <span className="size-8 rounded-full bg-green-100 flex items-center justify-center">
+                  <WhatsappIcon />
+                </span>
+                <span className="size-8 rounded-full bg-blue-100 flex items-center justify-center">
+                  <PhoneIncomingIcon />
+                </span>
               </div>
             </div>
           </div>

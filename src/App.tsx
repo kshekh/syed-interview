@@ -1,7 +1,7 @@
-import Header from "./components/layout/header";
-import MessageList from "./components/layout/message-list";
-import SidebarLeft from "./components/layout/sidebar-left";
-import SidebarRight from "./components/layout/sidebar-right";
+import Header from "@/components/layout/header";
+import MessageList from "@/components/layout/message-list";
+import SidebarLeft from "@/components/layout/sidebar-left";
+import SidebarRight from "@/components/layout/sidebar-right";
 
 function App() {
   return (
