@@ -18,3 +18,5 @@ export { default as PhoneIcon } from "./phone.svg";
 export { default as RadarIcon } from "./radar.svg";
 export { default as VerifiedIcon } from "./verified.svg";
 export { default as WhatsappIcon } from "./whatsapp.svg";
+export { default as SendIcon } from "./send.svg";
+export { default as UserOutIcon } from "./user-out.svg";

@@ -16,6 +16,7 @@ import {
   MailIcon,
   PhoneIcon,
   RadarIcon,
+  VerifiedIcon,
   WhatsappIcon,
 } from "@/assets/icons";
 
@@ -144,14 +145,26 @@ const SidebarLeft = () => {
       {/*  */}
       <div className="border rounded-2xl shadow-sky-100 shadow-md">
         {/*  */}
-        <div className="flex items-start justify-between pt-7 pb-1 px-2.5 border-b">
-          <div className="">
-            <p className="text-sm font-semibold font-montserrat">
-              Farukh Iminov
-            </p>
-            <p className="text-xs text-muted font-montserrat font-medium">
-              Created at 15 Jan, 2024 10:15 AM
-            </p>
+        <div className="flex items-center justify-between pt-7 pb-1 px-2.5 border-b">
+          <div className="flex items-center gap-2">
+            <div className="size-10 rounded-full bg-red-100 shrink-0 overflow-hidden">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                className="size-full object-cover"
+              />
+            </div>
+            <div>
+              <div className="flex gap-1 items-center">
+                <p className="text-sm font-semibold font-montserrat text-[#040404]">
+                  Farukh Iminov
+                </p>
+                <VerifiedIcon />
+              </div>
+              <p className="text-xs text-muted font-montserrat font-medium">
+                Created at 15 Jan, 2024 10:15 AM
+              </p>
+            </div>
           </div>
           <span className="font-montserrat font-semibold text-sm">AED 100</span>
         </div>

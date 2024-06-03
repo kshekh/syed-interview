@@ -2,20 +2,52 @@ import {
   CheckCircleIcon,
   GmailIcon,
   PhoneIncomingIcon,
+  SendIcon,
+  UserOutIcon,
   WhatsappIcon,
 } from "@/assets/icons";
 import BgImage from "./../../assets/images/whatsapp-bg.jpg";
+import { useState } from "react";
+import MessageReceive from "../ui/message-receive";
+import MessageSend from "../ui/message-send";
+
+const TABS = [
+  {
+    id: 1,
+    title: "All Chats",
+  },
+  {
+    id: 2,
+    title: "Calls",
+  },
+  {
+    id: 3,
+    title: "WhatsApp",
+  },
+  {
+    id: 4,
+    title: "Email",
+  },
+];
 
 const MessageList = () => {
+  const [activeTab, setActiveTab] = useState(1);
+
   return (
     <>
       <div className="overflow-hidden px-2.5 py-3 h-full flex flex-col">
         <div className="border rounded-2xl py-2.5 px-3 shadow-sky-100 shadow-md">
           <div className="flex justify-between items-center">
             <div className="flex gap-x-2.5 items-center">
-              <div className="rounded-full size-9 bg-red-100 shadow border border-white"></div>
+              <div className="rounded-full size-9 bg-red-100 shadow border border-white overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt=""
+                  className="size-full object-cover"
+                />
+              </div>
               <div className="font-montserrat">
-                <p className="text-sm font-medium">Syed Tanveer</p>
+                <p className="text-sm font-semibold">Syed Tanveer</p>
                 <p className="text-muted text-xs">+97155585858</p>
               </div>
             </div>
@@ -43,27 +75,44 @@ const MessageList = () => {
         <div className="border rounded-2xl mt-3 grow flex flex-col overflow-hidden">
           {/* Tabs */}
           <div className="grid grid-cols-4 text-center border-b text-sm">
-            <button className="text-muted hover:text-foreground hover:font-semibold font-medium pt-6 pb-2 border-r">
-              All Chats
-            </button>
-            <button className="text-muted hover:text-foreground hover:font-semibold font-medium pt-6 pb-2 border-r">
-              Calls
-            </button>
-            <button className="text-muted hover:text-foreground hover:font-semibold font-medium pt-6 pb-2 border-r">
-              WhatsApp
-            </button>
-            <button className="text-muted hover:text-foreground hover:font-semibold font-medium pt-6 pb-2">
-              Email
-            </button>
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={
+                  `font-medium pt-6 pb-2 border-r` +
+                  `
+                  ${
+                    activeTab === tab.id
+                      ? "text-foreground font-semibold"
+                      : "text-muted hover:text-foreground hover:font-semibold"
+                  }`
+                }
+              >
+                {tab.title}
+              </button>
+            ))}
           </div>
           {/* Messages List */}
           <div
-            className="grow"
+            className="grow p-2 overflow-hidden"
             style={{
               backgroundImage: `url(${BgImage})`,
               backgroundSize: "cover",
             }}
-          ></div>
+          >
+            <div className="overflow-y-auto h-full">
+              <MessageReceive message="Hello from earth!!!" />
+              <MessageSend message="Hello from earth!!!" />
+              <MessageReceive message="Hello from earth!!!" />
+              <MessageSend message="Hello from earth!!!" />
+              <MessageReceive message="Hello from earth!!!" />
+              <MessageSend message="Hello from earth!!!" />
+              <MessageReceive message="Hello from earth!!!" />
+              <MessageSend message="Hello from earth!!!" />
+              <MessageReceive message="Hello from earth!!!" />
+            </div>
+          </div>
 
           {/* Text Input */}
           <div className="border-t p-2.5">
@@ -90,12 +139,26 @@ const MessageList = () => {
 
             <div className="mt-2.5">
               <form action="" className="border rounded-xl bg-gray-200">
-                <div className="flex h-12 items-center">
+                <div className="flex h-12 items-center text-[10px]">
+                  <div className="pr-4 mr-4 border-r border-gray-300 h-full flex items-center">
+                    <select className="font-montserrat bg-transparent px-6 focus:outline-none">
+                      <option value="agent">Agent</option>
+                      <option value="option2">Option 2</option>
+                    </select>
+                  </div>
                   <input
                     type="text"
-                    className="grow bg-transparent text-[10px] focus:outline-none"
+                    className="grow bg-transparent focus:outline-none"
                     placeholder="Message"
                   />
+                  <div className="pr-2.5 flex items-center gap-2">
+                    <button className="size-6 rounded-full shadow bg-orange-400 flex items-center justify-center">
+                      <SendIcon />
+                    </button>
+                    <button className="size-6 rounded-full shadow bg-green-400 flex items-center justify-center">
+                      <UserOutIcon />
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
