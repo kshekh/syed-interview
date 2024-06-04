@@ -20,3 +20,4 @@ export { default as VerifiedIcon } from "./verified.svg";
 export { default as WhatsappIcon } from "./whatsapp.svg";
 export { default as SendIcon } from "./send.svg";
 export { default as UserOutIcon } from "./user-out.svg";
+export { default as ReplyIcon } from "./reply.svg";

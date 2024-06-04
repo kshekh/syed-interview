@@ -61,7 +61,7 @@ const MessageList = () => {
                   <GmailIcon />
                 </span>
                 <span className="size-8 rounded-full bg-green-100 flex items-center justify-center">
-                  <WhatsappIcon />
+                  <WhatsappIcon className="size-5" />
                 </span>
                 <span className="size-8 rounded-full bg-blue-100 flex items-center justify-center">
                   <PhoneIncomingIcon />
@@ -102,37 +102,78 @@ const MessageList = () => {
             }}
           >
             <div className="overflow-y-auto h-full">
-              <MessageReceive message="Hello from earth!!!" />
-              <MessageSend message="Hello from earth!!!" />
-              <MessageReceive message="Hello from earth!!!" />
-              <MessageSend message="Hello from earth!!!" />
-              <MessageReceive message="Hello from earth!!!" />
-              <MessageSend message="Hello from earth!!!" />
-              <MessageReceive message="Hello from earth!!!" />
-              <MessageSend message="Hello from earth!!!" />
-              <MessageReceive message="Hello from earth!!!" />
+              <MessageReceive
+                type="normal"
+                source="whatsapp"
+                date="12:33 PM"
+                message="Hello from earth!!!"
+              />
+              <MessageSend
+                type="normal"
+                source="mail"
+                date="10:30 PM"
+                message="Hello from earth!!!"
+                replyFrom={{
+                  name: "Syed Tanveer",
+                  image:
+                    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                }}
+              />
+              <MessageReceive
+                type="reply"
+                source="mail"
+                date="12:33 PM"
+                message="Hello from earth!!!"
+                replyFrom={{
+                  name: "Syed Tanveer",
+                  image:
+                    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                }}
+              />
+              <MessageSend
+                type="normal"
+                source="mail"
+                date="10:30 PM"
+                message="Hello from earth!!!"
+                replyFrom={{
+                  name: "Syed Tanveer",
+                  image:
+                    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                }}
+              />
+              <MessageSend
+                type="normal"
+                source="mail"
+                date="10:30 PM"
+                message="Hello from earth!!!"
+                replyFrom={{
+                  name: "Syed Tanveer",
+                  image:
+                    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                }}
+              />
             </div>
           </div>
 
           {/* Text Input */}
           <div className="border-t p-2.5">
             <div className="flex gap-2 overflow-x-auto no-scrollbar">
-              <span className="rounded-xl bg-yellow-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-yellow-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
-              <span className="rounded-xl bg-green-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-green-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
-              <span className="rounded-xl bg-blue-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-blue-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
-              <span className="rounded-xl bg-orange-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-orange-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
-              <span className="rounded-xl bg-red-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-red-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
-              <span className="rounded-xl bg-purple-500 text-white py-2.5 px-9 text-[9px]">
+              <span className="rounded-lg shadow-md bg-purple-500 text-white py-2.5 px-9 text-[9px]">
                 Assigned
               </span>
             </div>

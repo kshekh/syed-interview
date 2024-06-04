@@ -134,7 +134,7 @@ const SidebarLeft = () => {
       </div>
 
       {/*  */}
-      <div className="pt-8 pb-5">
+      <div className="pt-8 pb-2">
         <div className="flex justify-between items-center">
           <span className="font-montserrat font-semibold text-xl">
             Agent who worked
@@ -166,7 +166,29 @@ const SidebarLeft = () => {
               </p>
             </div>
           </div>
-          <span className="font-montserrat font-semibold text-sm">AED 100</span>
+          <div className="flex">
+            <div className="size-8 rounded-full bg-red-100 shrink-0 overflow-hidden -mr-4 border border-white shadow">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                className="size-full object-cover"
+              />
+            </div>
+            <div className="size-8 rounded-full bg-red-100 shrink-0 overflow-hidden -mr-4 border border-white shadow">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                className="size-full object-cover"
+              />
+            </div>
+            <div className="size-8 rounded-full bg-red-100 shrink-0 overflow-hidden border border-white shadow">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                className="size-full object-cover"
+              />
+            </div>
+          </div>
         </div>
         {/*  */}
         <div className="grid grid-cols-2 p-2.5 gap-y-2 overflow-hidden">
@@ -181,7 +203,7 @@ const SidebarLeft = () => {
           </div>
           <div className="flex items-center gap-2.5">
             <div className="bg-green-100 rounded-full size-8 shrink-0 flex items-center justify-center">
-              <WhatsappIcon />
+              <WhatsappIcon className="size-5" />
             </div>
             <div>
               <p className="text-xs">Whatsapp</p>
@@ -210,7 +232,7 @@ const SidebarLeft = () => {
       </div>
 
       {/*  */}
-      <div className="pt-8 pb-5">
+      <div className="pt-8 pb-2">
         <div className="flex justify-between items-center">
           <span className="font-montserrat font-semibold text-xl">
             Lead Details
@@ -235,7 +257,7 @@ const SidebarLeft = () => {
             <tr className="border-b">
               <td className="py-2">
                 <div className="flex items-center gap-1">
-                  <MailIcon />
+                  <MailIcon className="size-4 text-black" />
                   <span className="font-medium">Email</span>
                 </div>
               </td>
